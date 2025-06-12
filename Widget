@@ -119,7 +119,7 @@
           this.getContactIdentifier(); // This will generate and store if not already present
 
           // Define defaults within the client-side scope (serialized from server)
-          const defaultSettings = {"theme":"dark","themeColor":"#2563eb","showFirstMessage":true,"firstMessage":"Hello! How can I help you today?","logoUrl":"","logoWidth":100,"logoCropPosition":{"x":50,"y":50},"logoScale":1,"widgetLogoCropPosition":{"x":50,"y":50},"widgetLogoScale":1,"useLogoForAvatar":false,"useLogoForMinimizedWidget":false,"dailyLimit":200,"widgetTitle":"Chat Widget","width":400,"height":500,"minimizedSize":"large","placement":"bottom-right","inputPlaceholder":"Type your message...","typingIndicator":"typing...","chatBubble":{"enabled":true,"message":"Hi there! Need any help?","delaySeconds":2}};
+          const defaultSettings = {"theme":"dark","themeColor":"#1F51FF","showFirstMessage":true,"firstMessage":"Hello! How can I help you today?","logoUrl":"","logoWidth":100,"logoCropPosition":{"x":50,"y":50},"logoScale":1,"widgetLogoCropPosition":{"x":50,"y":50},"widgetLogoScale":1,"useLogoForAvatar":false,"useLogoForMinimizedWidget":false,"dailyLimit":200,"widgetTitle":"Chat Widget","width":400,"height":500,"minimizedSize":"large","placement":"bottom-right","inputPlaceholder":"Type your message...","typingIndicator":"typing...","chatBubble":{"enabled":true,"message":"Hi there! Need any help?","delaySeconds":2}};
           
           // Get the apiHost value from the parent function if it exists
           var apiHost = typeof getScriptDomain === 'function' ? getScriptDomain() : 'https://testmyprompt.com';
@@ -235,7 +235,7 @@
             transition: all 0.3s ease;
             transform-origin: ${placementStyles.transformOrigin};
             pointer-events: auto;
-            background-color: ${finalSettings.theme === 'dark' ? '#111419' : 'white'};
+            background-color: ${finalSettings.theme === 'dark' ? '#1F51FF' : 'white'};
           `;
           
           // Create the Iframe first
@@ -263,7 +263,7 @@
           Object.assign(minimizedButton.style, {            width: sizeConfig.button + 'px',
             height: sizeConfig.button + 'px',
             borderRadius: '50%',
-            backgroundColor: finalSettings.themeColor || '#276d64',
+            backgroundColor: finalSettings.themeColor || '#1F51FF',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
@@ -324,8 +324,8 @@
             chatBubble.className = 'ai-chat-widget-bubble'; // Use a class for easier targeting
             Object.assign(chatBubble.style, {              position: 'absolute',
               padding: '14px 16px',
-              backgroundColor: finalSettings.theme === 'dark' ? '#1a1c23' : 'white',
-              color: finalSettings.theme === 'dark' ? '#fff' : '#1a1c23',
+              backgroundColor: finalSettings.theme === 'dark' ? '#1F51FF' : 'white',
+              color: finalSettings.theme === 'dark' ? '#fff' : '#1F51FF',
               borderRadius: '16px',
               boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
               maxWidth: '260px',
